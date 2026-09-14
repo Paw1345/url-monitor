@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+
+.pytest_cache/
+
+.venv/
+venv/
+env/
+ENV/
+
+.vscode/
+.idea/
+
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
