@@ -24,6 +24,7 @@ async def test_check_url_returns_status_200():
     result = await app.check_url(client, "https://example.com", 5.0)
 
     assert "200" in result
+    client.get.assert_awaited_once_with("https://example.com", timeout=5.0)
 
 
 @pytest.mark.anyio
