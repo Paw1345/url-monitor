@@ -90,3 +90,7 @@ class AsyncClient:
 
     assert process.returncode == 0
     assert "200" in process.stdout
+
+
+def test_ci_failure_demo():
+    assert False, "Intentional failure for the CI lesson"
