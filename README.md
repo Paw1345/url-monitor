@@ -15,7 +15,8 @@ A lightweight asynchronous CLI tool for checking the HTTP status and response ti
 ## Requirements
 
 - Python 3.14+
-- dependencies from `requirements.txt`
+- runtime dependencies from `requirements.txt`
+- development dependencies from `requirements-dev.txt`
 
 ## Installation
 
@@ -30,6 +31,12 @@ Install the project dependencies:
 
 ```powershell
 py -3.14 -m pip install -r requirements.txt
+```
+
+For development and testing, install the development dependencies instead:
+
+```powershell
+py -3.14 -m pip install -r requirements-dev.txt
 ```
 
 ## Usage
@@ -54,6 +61,7 @@ The input file must be a JSON array of URLs:
 ## Testing
 
 ```powershell
+python -m pip install -r requirements-dev.txt
 python -m pytest
 ```
 
@@ -64,6 +72,7 @@ url-monitor/
 ├── .gitignore
 ├── app.py
 ├── README.md
+├── requirements-dev.txt
 ├── requirements.txt
 ├── urls.json
 └── tests/
