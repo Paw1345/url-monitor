@@ -80,13 +80,16 @@ class AsyncClient:
     )
 
     environment = os.environ.copy()
-    environment["PYTHONPATH"] = str(tmp_path) + os.pathsep + environment.get("PYTHONPATH", "")
+    environment["PYTHONPATH"] = (
+        str(tmp_path) + os.pathsep + environment.get("PYTHONPATH", "")
+    )
     app_path = Path(app.__file__)
     process = subprocess.run(
         [sys.executable, str(app_path), str(input_file), "--timeout", "5"],
         capture_output=True,
         text=True,
         env=environment,
+        check=False,
     )
 
     assert process.returncode == 0

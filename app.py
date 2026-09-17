@@ -1,11 +1,10 @@
-import asyncio
 import argparse
+import asyncio
 import json
 import time
 from pathlib import Path
 
 import httpx
-
 
 
 async def check_url(client, url, timeout):
