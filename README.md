@@ -65,11 +65,27 @@ python -m pip install -r requirements-dev.txt
 python -m pytest
 ```
 
+## Docker
+
+Build the container image:
+
+```powershell
+docker build -t url-monitor .
+```
+
+Run the application in a container:
+
+```powershell
+docker run --rm url-monitor
+```
+
 ## Project structure
 
 ```text
 url-monitor/
+├── .dockerignore
 ├── .gitignore
+├── Dockerfile
 ├── app.py
 ├── README.md
 ├── requirements-dev.txt
